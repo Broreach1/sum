@@ -598,7 +598,7 @@ if __name__ == "__main__":
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     print("✅ Bot is running...")
-    async def app.run_polling(drop_pending_updates=True)
+    app.run_polling(drop_pending_updates=True)
 
 
     # Allows nested event loops (VS Code/Notebook)
