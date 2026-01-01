@@ -585,6 +585,9 @@ async def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.run_polling()
 
+if __name__ == "__main__":
+    main()
+    
     async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("សួស្តី! Bot is ready ✅", reply_markup=reply_menu())
 
@@ -599,7 +602,6 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
     # Allows nested event loops (VS Code/Notebook)
     import nest_asyncio
     nest_asyncio.apply()
