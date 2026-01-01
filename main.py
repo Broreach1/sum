@@ -568,7 +568,6 @@ async def recalc_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ==============================
 # ------------ Main ------------
 # ==============================
-async def main():
     print("⚠️ Reminder:")
     print(" - totals.db will be created if missing")
     print(" - history table stores ALL data permanently (with business_date)")
