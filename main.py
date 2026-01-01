@@ -581,6 +581,7 @@ async def main():
 
     if not BOT_TOKEN or len(BOT_TOKEN) < 20:
         raise RuntimeError("BOT_TOKEN missing. Set BOT_TOKEN env var or edit the code.")
+    
     def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.run_polling()
@@ -600,8 +601,9 @@ if __name__ == "__main__":
     print("✅ Bot is running...")
     async def app.run_polling(drop_pending_updates=True)
 
-
 if __name__ == "__main__":
+    main()
+
     # Allows nested event loops (VS Code/Notebook)
     import nest_asyncio
     nest_asyncio.apply()
