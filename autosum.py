@@ -6,6 +6,9 @@ import asyncio
 import io
 import pandas as pd
 from datetime import datetime, date, time, timedelta
+from telegram.ext import Updater
+from telegram.ext import ApplicationBuilder
+
 
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, InputFile
 from telegram.ext import (
@@ -580,6 +583,7 @@ async def main():
         raise RuntimeError("BOT_TOKEN missing. Set BOT_TOKEN env var or edit the code.")
 
     app = ApplicationBuilder().token(BOT_TOKEN).build()
+    app.run_polling()
 
     async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("សួស្តី! Bot is ready ✅", reply_markup=reply_menu())
@@ -595,6 +599,7 @@ async def main():
 
 
 if __name__ == "__main__":
+    main()
     # Allows nested event loops (VS Code/Notebook)
     import nest_asyncio
     nest_asyncio.apply()
