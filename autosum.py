@@ -581,7 +581,7 @@ async def main():
 
     if not BOT_TOKEN or len(BOT_TOKEN) < 20:
         raise RuntimeError("BOT_TOKEN missing. Set BOT_TOKEN env var or edit the code.")
-
+    def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.run_polling()
 
