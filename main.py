@@ -601,8 +601,6 @@ if __name__ == "__main__":
     print("✅ Bot is running...")
     async def app.run_polling(drop_pending_updates=True)
 
-if __name__ == "__main__":
-    main()
 
     # Allows nested event loops (VS Code/Notebook)
     import nest_asyncio
